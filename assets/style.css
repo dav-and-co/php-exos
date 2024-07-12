@@ -1,0 +1,132 @@
+header{
+    display: flex;
+    background-color: antiquewhite;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    img{
+        width : 5%;
+        }
+    div{
+        width : 70%;
+        display: flex;
+        flex-direction: column;
+    }
+    h3{
+       text-align: center;
+       color: red;
+       margin :15px 0;
+    }
+    ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+main{
+    background-color: bisque;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    input{
+        width: 30%;
+        padding : 10px;
+    }
+    form{
+        width: 50%;
+    }
+    .adroite{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+        background-color: brown;
+        color: white;
+        h3{
+            text-align: center;
+        }
+    }
+    div{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+footer{
+    background-color: rgb(99, 12, 12);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    img{
+        width : 5%;
+        }
+    p{
+        width : 20%;   
+    }
+    div{
+        width : 65%;   
+    }
+    ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+.produits{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap:wrap;
+    width: 75%;
+    margin: auto;
+}
+.produit{
+     background-color: rgb(80, 51, 51);
+    width: 32%;
+    border : 1px solid black;
+    text-align: center;
+    border-radius: 12px;
+    color: white;
+}
+.prod{
+    width:90%;
+    display: flex; 
+    justify-content: center;
+
+}
+
+h1{
+    text-align: center;
+}
+.filtres{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width :100%;
+
+
+}
+
+.entete{
+    width: 20%;
+}
+
+.inputProd{
+    width: 60%;
+    margin: 10px 0;
+}
+
+.inputProd1{
+    width: 100%;
+    margin: 10px 0px;
+}
+
+.marge{
+    margin: 30px 0;
+}
