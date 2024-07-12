@@ -86,11 +86,11 @@ class vendorMachine {
 
 $date20240703 = new vendorMachine();
 $date20240703->turnOn();
-$date20240703->buySnack("Snickers");
-$date20240703->buySnack("Twix");
-$date20240703->buySnack("Bounty");
-$date20240703->shootWithFoot();
-$date20240703->turnOff();
+// $date20240703->buySnack("Snickers");
+// $date20240703->buySnack("Twix");
+// $date20240703->buySnack("Bounty");
+// $date20240703->shootWithFoot();
+// $date20240703->turnOff();
 	var_dump($date20240703);
 
 ?>

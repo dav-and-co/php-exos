@@ -16,14 +16,13 @@
 <!-- Pacours du tableau pour afficher chacune des lignes -->
 <?php foreach ($orders as $order) { 
                 echo "<div>";
-                    echo "<p>".($order['id'])."</p>";
-					echo "<p>".($order['customer'])."</p>";
-					echo "<p>".($order['amount'])."</p>";
+                    echo "<h2>".($order['id'])." - ".($order['customer'])."</h2>";
+					echo "<p> montant : ".($order['amount'])."</p>";
 					// affiche de la date sous un format <>
 					$date = new DateTime($order['date']);
-					echo "<p>" . $date->format('F d, Y') . "</p>";
+					echo "<p> date : " . $date->format('F d, Y') . "</p>";
 					// parcours du tableau produits pour afficher chacune des lignes
-					echo "<p> PRODUITS COMMANDES</p>";
+					echo "<h3> PRODUITS COMMANDES</h3>";
 					foreach ($order['products'] as $product) { 
 						echo "<p>".$product."</p>";
 					} 
