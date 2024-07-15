@@ -1,5 +1,5 @@
 
-    <!-- http://localhost/piscine-php-contact/views/hotdog-enfant.php   -->
+    <!-- http://localhost/piscine-phpgi-contact/views/hotdog-enfant.php   -->
 
 <!--  appel de config et index.controleur  -->
 
@@ -24,7 +24,7 @@ class Hotdog extends Mealparent{
 		$this->size=$size;
 		$this->statut="en cours de commande";
 		$this->orderedat=new DateTime();
-		$this->$bread=$bread;
+		$this->bread=$bread;
 
 
 		if ($size==="s") {
@@ -47,7 +47,7 @@ class Hotdog extends Mealparent{
 }
 
 // initialisation de l'instance de class pizza
-$claudeHD = new Hotdog ("m", "cereales");
+$claudeHD = new Hotdog ("m","cereales");
 
 
 
