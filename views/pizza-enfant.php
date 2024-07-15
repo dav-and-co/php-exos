@@ -1,26 +1,21 @@
 
-    <!-- http://localhost/piscine-php-contact/views/pizza.php   -->
+    <!-- http://localhost/piscine-php-contact/views/pizza-enfant.php   -->
 
 <!--  appel de config et index.controleur  -->
 
 <?php require_once('../config/config.php');?>
 <?php require_once('../controller/commande-Controller.php'); ?> 
+<?php require_once('./mealparent.php');?>
 
 <main>
 
-<!-- Créez un nouveau fichier contenant une classe Pizza.
-Ajoutez en propriétés privées : size, price, base, ingredient1, ingredient2, ingredient3, status, orderedAt
-Faites en sorte que quand une nouvelle Pizza est créée (nouvelle instance), toutes les propriétés soient obligatoirement remplies, soit par l'utilisateur, soit calculées.
-Faites une méthode pay() qui permet de passer la pizza en status "payé" uniquement si le statut actuel est "en cours"
-Faites une méthode ship() qui permet de passer la pizza en status "livré" uniquement si le status actuel est "payé"
-Commentez votre code -->
+<!-- créez une classe Meal, qui contient toutes les propriétés communes aux deux classes + méthodes ship et pay
+Faites hériter les classes Pizza et Hotdog ("enfants") de la classe Meal ("parent"), pour qu'elles beneficient des propriétés et méthodes de la classe parente
+Attention à utiliser la bonne visibilité (private, protected ou public) pour les propriétés et méthodes de la classe Meal -->
 
 <?php
-class Pizza {
+class Pizza extends Mealparent{ 
 	// initialisation des données privées
-	private $price;
-	private $size;
-	private $statut;
 	private $orderedat;
 	private $base;
 	private $ingredient1;
@@ -48,26 +43,6 @@ class Pizza {
 		}
 		if ($size==="xl") {
 			$this->price=14;
-		}
-	}
-	public function pay($montant) {
-		if ($this->statut==="en cours de commande") {
-			if ($montant===$this->price) {
-				echo "<p> C'est bon, merci ! </p>";
-				$this->statut="payé";
-			} else {
-				echo "<p> Merci de payer le bon montant : ".$this->price." </p>";
-			}
-		} else {
-			echo "<p> Commande non enregistrée </p>";
-		}
-	}
-	public function ship() {
-		if ($this->statut==="payé") {
-			$this->statut="livré";
-			echo "<p> livraison en cours  </p>";
-		} else {
-			echo "<p> pizza non payée </p>";
 		}
 	}
 	public function getingredients() {
